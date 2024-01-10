@@ -5,30 +5,25 @@ date: "10 January 2024"
 output: html_document
 ---
 
-```
-{r setup, include=FALSE}
+```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 require('tidyverse')
 ```
 
 Here are some of my favorite things:
-- my cat
-- my cars
-- canada
+1. my cat
+2. my cars
+3. canada
 
 ## Average MPG
 
-```
-
-{r avgmpg}
-avgmpgdata <- mpg %>% 
-  group_by(manufacturer) %>% 
-  summarize(hwy = mean(hwy), cty = mean(cty))
+```{r avgmpg}
+avgmpgdata <- mpg %>% 
+  group_by(manufacturer) %>% 
+  summarize(hwy = mean(hwy), cty = mean(cty))
 
 g <- ggplot(data = avgmpgdata)
 g + geom_col(aes(x = cty, y = reorder(manufacturer, cty), fill = manufacturer)) +
-  ggtitle("Average Miles per Gallon for City Driving by Manufacturer", subtitle = "Data on vehicles from 1999 to 2008 for 38 popular models of cars") +
-  theme(legend.position="none") 
-  
+  ggtitle("Average Miles per Gallon for City Driving by Manufacturer", subtitle = "Data on vehicles from 1999 to 2008 for 38 popular models of cars") +
+  theme(legend.position="none")
 ```
-
