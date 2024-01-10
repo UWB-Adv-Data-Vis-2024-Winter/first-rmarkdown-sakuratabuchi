@@ -9,3 +9,4 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+I have added text here to show I can write in an R Markdown document.
