@@ -5,8 +5,10 @@ date: "10 January 2024"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
+```
+{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+require('tidyverse')
 ```
 
 Here are some of my favorite things:
@@ -28,3 +30,4 @@ g + geom_col(aes(x = hwy, y = reorder(manufacturer, hwy), fill = manufacturer)) 
   ggtitle("Average Miles per Gallon for Highway Driving by Manufacturer", subtitle = "Data on vehicles from 1999 to 2008 for 38 popular models of cars") +
   theme(legend.position="none") 
 ```
+
