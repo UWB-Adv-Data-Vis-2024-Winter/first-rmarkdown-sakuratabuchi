@@ -1,6 +1,6 @@
 ---
 title: "First R Markdown in Git"
-author: "Sakura Tabuchi"
+author: "Sakura Tabuchi-Stebbins"
 date: "2024-01-10"
 output: html_document
 ---
